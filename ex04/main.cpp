@@ -1,10 +1,5 @@
 #include "sed.hpp"
 
-void create_outfile(std::ifstream infile, std::string search, std::string replace) {
-	std::ofstream file2("text2");
-	file2 << "test" << std::endl;
-}
-
 int main(int ac, char **av) {
 	if (ac != 4)
 	{
@@ -12,7 +7,10 @@ int main(int ac, char **av) {
 		return 0;
 	}
 	std::string line;
+	std::string outfile_name = std::string(av[1]) + ".replace";
 	std::ifstream file;
+	std::ofstream outfile;
+	const char *c_outfile_name = outfile_name.c_str();
 
 	file.open(av[1], std::ifstream::in);
 	if (!file.good())
@@ -20,10 +18,19 @@ int main(int ac, char **av) {
 		std::cout << RED << "[FILE ERROR] Invalid file" << RESET << std::endl;
 		return 0;
 	}
-	char c = file.get();
-	while (file.good()) {
-		std::cout << c;
-		c = file.get();
+	outfile.open(c_outfile_name, std::ifstream::out);
+		if (!file.good())
+	{
+		std::cout << RED << "[FILE ERROR] Outfile is not opened" << RESET << std::endl;
+		return 0;
 	}
-	create_outfile(file, av[2], av[3]);
+	while (std::getline(file, line)) {
+		std::cout << "infile: " << line << std::endl;
+		if (line.compare(av[2]) == 0) {
+			line = av[3];
+		}
+		outfile << line << std::endl;
+	}
+	file.close();
+	outfile.close();
 }
