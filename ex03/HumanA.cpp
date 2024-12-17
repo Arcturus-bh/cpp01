@@ -1,15 +1,15 @@
 #include "HumanA.hpp"
-#include "Weapon.hpp"
 
 // constructeur
-HumanA::HumanA(std::string name, Weapon weapon) : name(name), weapon(weapon) {
+HumanA::HumanA(std::string name, Weapon& weapon) : name(name), weapon(weapon) {
+    ;
 }
 
+//destructeur
 HumanA::~HumanA(void) {
-	// destructeur
-	;
+    ;
 }
 
 void HumanA::attack(void) {
-	std::cout << this->name << "attack with their" << weapon.getType() << std::endl;
+    std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
 }

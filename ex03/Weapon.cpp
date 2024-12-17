@@ -2,18 +2,18 @@
 
 // constructeur
 Weapon::Weapon(std::string type) {
-	this->setType(type);
+    this->setType(type);
 }
 
+//destructeur
 Weapon::~Weapon(void) {
-	// destructeur
-	;
+    ;
 }
 
 void Weapon::setType(std::string type) {
-	this->_type = type;
+    this->_type = type;
 }
 
-std::string	Weapon::getType(void) const {
-	return this->_type;
+std::string Weapon::getType(void) const {
+    return this->_type;
 }

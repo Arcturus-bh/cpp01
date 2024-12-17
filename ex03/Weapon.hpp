@@ -1,10 +1,5 @@
-#ifndef WEAPON_H
-#define WEAPON_H
-
-#include <iostream>
-#include <string>
-#include <cctype>
-#include <iomanip>
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
 # define RED     "\x1b[31m"
 # define GREEN   "\x1b[32m"
@@ -14,17 +9,18 @@
 # define CYAN    "\x1b[36m"
 # define RESET   "\x1b[0m"
 
-class Weapon
-{
-	private:
-		std::string _type;
+#include <iostream>
 
-	public:
-		Weapon(std::string type);
-		~Weapon(void);
-	
-		void 		setType(std::string type);
-		std::string	getType(void) const;
+class Weapon {
+    private:
+        std::string _type;
+
+    public:
+        Weapon(std::string type);
+        ~Weapon(void);
+
+        void        setType(std::string type);
+        std::string getType(void) const;
 };
 
 #endif
