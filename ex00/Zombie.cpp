@@ -1,18 +1,13 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(void) {
-
-}
+Zombie::Zombie(void) {}
 
 // constructeur
 Zombie::Zombie(std::string name) {
 	this->setName(name);
 }
 
-Zombie::~Zombie(void) {
-	// destructeur
-	;
-}
+Zombie::~Zombie(void) {}
 
 void Zombie::announce(void) {
 	std::cout << this->getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;

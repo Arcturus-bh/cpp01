@@ -4,8 +4,6 @@
 #include <iostream>
 #include <string>
 #include <cctype>
-#include <array>
-#include <algorithm>
 #include <iomanip>
 
 # define RED     "\x1b[31m"
