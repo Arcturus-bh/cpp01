@@ -16,11 +16,12 @@ class Harl
         void info(void);
         void warning(void);
         void error(void);
-
     public:
         Harl(void);
         ~Harl(void);
         void complain(std::string level);
 };
+
+bool    is_only_space(std::string& str);
 
 #endif

@@ -25,15 +25,15 @@ void Harl::error(void) {
 }
 
 void Harl::complain(std::string level) {
-    if (level.empty()) {
+    int i = 0;
+    if (level.empty() || std::all_of(level.begin(), level.end(), ::isspace)) {
         std::cout << RED << "ERROR - complain argument must be 'debug', 'info', 'warning' or 'error'" << RESET << std::endl;
         return;
     }
-    int i = 0;
     std::string str[] = {"debug", "info", "warning", "error"};
     while (i < 4)
     {
-        if (level == str[i])
+        if (level.compare(str[i]) == 0)
             break;
         i++;
     }
