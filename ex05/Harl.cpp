@@ -26,7 +26,7 @@ void Harl::error(void) {
 
 void Harl::complain(std::string level) {
     int i = 0;
-    if (level.empty() || std::all_of(level.begin(), level.end(), ::isspace)) {
+    if (level.empty() || is_only_space(level)) {
         std::cout << RED << "ERROR - complain argument must be 'debug', 'info', 'warning' or 'error'" << RESET << std::endl;
         return;
     }
