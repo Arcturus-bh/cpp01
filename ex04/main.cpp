@@ -6,7 +6,7 @@
 /*   By: aldalmas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 13:00:41 by aldalmas          #+#    #+#             */
-/*   Updated: 2025/02/21 13:02:09 by aldalmas         ###   ########.fr       */
+/*   Updated: 2025/02/21 13:35:55 by aldalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(int ac, char **av) {
 		return 0;
 	}
 	outfile.open(c_outfile_name, std::ifstream::out);
-		if (!file.good())
+		if (!outfile.good())
 	{
 		std::cout << RED << "FILE ERROR - Outfile is not opened" << RESET << std::endl;
 		return 0;
