@@ -6,19 +6,19 @@
 /*   By: aldalmas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 10:31:13 by aldalmas          #+#    #+#             */
-/*   Updated: 2025/02/21 10:31:15 by aldalmas         ###   ########.fr       */
+/*   Updated: 2025/02/22 15:42:33 by aldalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int main(void) {
-	Zombie* firstZombie = zombieHorde(14, "Pedro le loco");
+	int N = 5;
+	Zombie* horde = zombieHorde(N, "Pedro le loco");
 
-	std::cout << "\nZombie n°1 → ";
-	firstZombie->announce();
-	delete firstZombie;
-	std::cout << RED "[Deleted] zombie n°1" << RESET << std::endl;
-	
+	for (int i = 0; i < N; i++)
+		horde->announce();
+	delete[] horde;
+
 	return 0;
 }

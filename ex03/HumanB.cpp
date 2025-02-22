@@ -6,19 +6,17 @@
 /*   By: aldalmas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 10:38:31 by aldalmas          #+#    #+#             */
-/*   Updated: 2025/02/21 10:51:47 by aldalmas         ###   ########.fr       */
+/*   Updated: 2025/02/22 15:56:17 by aldalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-// constructeur
 HumanB::HumanB(std::string name) : _name(name) {
     this->_weapon = NULL;
     std::cout << GREEN << "(Constructeur HumanB) " << this->_name << RESET << std::endl;
 }
 
-//destructeur
 HumanB::~HumanB(void) {
     std::cout << RED << "(Destructeur HumanB) " << this->_name << RESET << std::endl;
 

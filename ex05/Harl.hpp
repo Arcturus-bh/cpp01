@@ -6,7 +6,7 @@
 /*   By: aldalmas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 15:37:11 by aldalmas          #+#    #+#             */
-/*   Updated: 2025/02/21 15:37:12 by aldalmas         ###   ########.fr       */
+/*   Updated: 2025/02/21 15:44:10 by aldalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Harl
         void info(void);
         void warning(void);
         void error(void);
+
     public:
         Harl(void);
         ~Harl(void);
