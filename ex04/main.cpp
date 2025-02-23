@@ -6,7 +6,7 @@
 /*   By: aldalmas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 13:00:41 by aldalmas          #+#    #+#             */
-/*   Updated: 2025/02/22 22:01:43 by aldalmas         ###   ########.fr       */
+/*   Updated: 2025/02/23 13:30:47 by aldalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,8 @@ int main(int ac, char **av) {
 		pos = 0;
 		while ((pos = line.find(av[2], pos)) != std::string::npos)
 		{
-			line = line.substr(0, pos) + replace + line.substr(pos + replace.size());
-			pos += to_find.size();
+			line = line.substr(0, pos) + replace + line.substr(pos + to_find.size());
+			pos += replace.size();
 		}
 		outfile << line << std::endl;
 	}
